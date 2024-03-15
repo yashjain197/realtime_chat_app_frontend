@@ -1,5 +1,7 @@
 # Realtime Chat Application Frontend
 
+Use this on the deployed version -> https://realtime-chat-app-frontend-qwmh.vercel.app/
+
 This repository contains the frontend code for a realtime chat application with community features.
 
 ## Getting Started
