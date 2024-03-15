@@ -2,36 +2,42 @@ import { useState, useEffect } from 'react';
 import useWebSocket from 'react-use-websocket';
 
 export function Home({ username }) {
-    const WS_URL = 'ws://127.0.0.1:8000';
+    // WebSocket URL
+    const WS_URL = 'wss://real-time-chat-backend-t3gc.onrender.com/'
+
+    // State for storing message history and current message
     const [messageHistory, setMessageHistory] = useState([]);
     const [message, setMessage] = useState('');
 
+    // Hook for WebSocket connection
     const { sendJsonMessage, lastJsonMessage } = useWebSocket(WS_URL, {
         queryParams: { username }
     });
 
+    // Effect for updating message history when a new message is received
     useEffect(() => {
         if (lastJsonMessage !== null) {
             setMessageHistory(prev => [...prev, lastJsonMessage]);
         }
     }, [lastJsonMessage]);
 
+    // Function to handle message submission
     const handleSubmit = () => {
         if (message.trim() !== '') {
-            sendJsonMessage({ message });
+             sendJsonMessage({ message });
             setMessage('');
         }
     };
 
-    // Check if both username and message are empty
+    // Check if both username and message are empty, return null if true
     if (!username && !message) {
-        return null; // Return nothing if both are empty
+        return null;
     }
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: '#f0f0f0' }}>
             <div style={{ flex: 1, overflowY: 'auto', padding: '20px' }}>
-                {/* Chat screen */}
+                {/* Render message history */}
                 {messageHistory.map((msg, index) => (
                     <div 
                         key={index} 
@@ -53,6 +59,7 @@ export function Home({ username }) {
                                 boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'
                             }}
                         >
+                            {/* Render username and message */}
                             <div style={{ fontSize: '12px', marginBottom: '5px' }}>{msg.username}</div>
                             <div style={{ fontSize: '18px' }}>{msg.message}</div>
                         </div>
@@ -60,7 +67,7 @@ export function Home({ username }) {
                 ))}
             </div>
             <div style={{ borderTop: '1px solid #ccc', padding: '20px', display: 'flex', alignItems: 'center' }}>
-                {/* Input and Send button */}
+                {/* Input field and Send button */}
                 <input
                     type="text"
                     placeholder="Enter Message"
