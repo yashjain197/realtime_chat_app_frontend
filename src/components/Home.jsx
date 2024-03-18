@@ -3,7 +3,7 @@ import useWebSocket from 'react-use-websocket';
 
 export function Home({ username }) {
     // WebSocket URL
-    const WS_URL = 'wss://real-time-chat-backend-t3gc.onrender.com/'
+    const WS_URL = 'ws://127.0.0.1:8000/'
 
     // State for storing message history and current message
     const [messageHistory, setMessageHistory] = useState([]);
