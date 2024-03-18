@@ -1,8 +1,37 @@
-# React + Vite
+# Realtime Chat Application Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Use this on the deployed version -> https://realtime-chat-app-frontend-qwmh.vercel.app/
 
-Currently, two official plugins are available:
+https://github.com/yashjain197/realtime_chat_app_frontend/assets/56026073/2f558ddc-c153-4472-8bb0-d21d0d24a70b
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://github.com/yashjain197/realtime_chat_app_frontend/assets/56026073/b968bed2-adfd-4295-98a1-f85616b3d3d0
+
+
+
+
+
+
+This repository contains the frontend code for a realtime chat application with community features.
+
+## Getting Started
+
+To get started with the application, follow these steps:
+
+1. Clone the repository to your local machine:
+  ```
+  git clone https://github.com/yashjain197/realtime_chat_app_frontend.git
+  ```
+2. Navigate into the directory:
+  ```
+  cd realtime_chat_app_frontend
+  ```
+3. Install dependencies:
+  ```
+  npm install
+  ```
+4. Make sure you have the backend server running. Then, start the frontend server:
+  ```
+  npm run dev
+  ```
+
+
