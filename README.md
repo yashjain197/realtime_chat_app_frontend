@@ -1,6 +1,6 @@
 # Realtime Chat Application Frontend
 
-Use this on the deployed version -> https://realtime-chat-app-frontend-qwmh.vercel.app/
+Use this on the deployed version -> https://realtime-chat-app-frontend-qwmh.vercel.app/ (This link may not work as it is on free server so it could stop)
 
 https://github.com/yashjain197/realtime_chat_app_frontend/assets/56026073/2f558ddc-c153-4472-8bb0-d21d0d24a70b
 
